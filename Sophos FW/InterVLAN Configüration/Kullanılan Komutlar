@@ -1,0 +1,82 @@
+CE12800
+*****************************************
+sys
+sysname CE12800
+
+
+vlan 100
+vlan 110
+vlan 120
+vlan 130
+
+
+int ge 1/0/0
+port link-type trunk
+port trunk allow-pass vlan 2 to 4094
+q
+int g 1/0/5
+port link-type access 
+port default vlan 100
+q
+int g 1/0/6
+port link-type access 
+port default vlan 110
+q
+int g 1/0/7
+port link-type access 
+port default vlan 120
+q
+int g 1/0/8
+port link-type access 
+port default vlan 130
+q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int Eth-Trunk 10
+port link-type trunk
+port trunk allow-pass vlan 2 to 4094
+mode lacp-static
+q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
